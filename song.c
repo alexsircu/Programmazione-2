@@ -8,6 +8,7 @@ int main(void) {
     typedef struct {
         char title[MAXT];
         char author[MAXA];
+        int duration;
     } song;
 
     song songs[MAX];
@@ -19,11 +20,14 @@ int main(void) {
 
         printf("Song author: ");
         scanf(" %99[^\n]", songs[i].author);
+
+        printf("Song duration: ");
+        scanf("%d[^\n]", &songs[i].duration);
     }
 
     for (size_t i = 0; i < MAX; i++)
     {
-        printf("Song title is: %s and the author is: %s\n", songs[i].title, songs[i].author);
+        printf("Song title is: %s, the author is: %s and the duration is: %d\n", songs[i].title, songs[i].author, songs[i].duration);
     }
 
     return 0;
