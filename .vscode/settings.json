@@ -1,0 +1,17 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/clang",
+    "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include"
+    ],
+    "C_Cpp.errorSquiggles": "enabled",
+    //"editor.formatOnSave": true,
+    //"[c]": {
+    //    "editor.defaultFormatter": "xaver.clang-format"
+    //},
+    "makefile.makefilePath": "Makefile",
+    "makefile.makeDirectory": "${workspaceFolder}",
+    "makefile.alwaysPreConfigure": false,
+    "makefile.buildBeforeDebugging": false,
+    "terminal.integrated.cwd": "${workspaceFolder}"
+}

@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}"
+    },
+    "tasks": [
+        {
+            "label": "Build (debug + executables)",
+            "type": "shell",
+            "command": "make debug && make executables",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Build current executable",
+            "type": "shell",
+            "command": "make debug && make run NAME=${fileBasenameNoExtension}",
+            "args": [],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Run current executable",
+            "type": "shell",
+            "command": "./bin/debug/${fileBasenameNoExtension}",
+            "dependsOn": [
+                "Build (debug + executables)"
+            ]
+        },
+        {
+            "label": "Valgrind current executable",
+            "type": "shell",
+            "command": "valgrind --leak-check=full --show-leak-kinds=all ./bin/debug/${fileBasenameNoExtension}",
+            "dependsOn": [
+                "Build (debug + executables)"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": []
+        }
+    ]
+}

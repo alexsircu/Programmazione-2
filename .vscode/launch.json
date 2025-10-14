@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug current (LLDB)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/debug/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build (debug + executables)",
+            "env": { "ASAN_OPTIONS": "halt_on_error=1" }
+        }
+    ]
+}
