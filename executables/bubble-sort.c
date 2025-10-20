@@ -12,9 +12,9 @@ int main(void)
     printf("Array before sorting:\n");
     print_array(arr, ARRAY_SIZE);
     
-    bubble_sort(arr, 5);
+    bubble_sort(arr, ARRAY_SIZE);
 
-    printf("Array before sorting:\n");
+    printf("Array after sorting:\n");
     print_array(arr, ARRAY_SIZE);
 
     return 0;
@@ -23,13 +23,21 @@ int main(void)
 void bubble_sort(int arr[], int size)
 {
     int tmp = 0;
-    for (int i = 0; i < size; i++)
+    int done = 0;
+
+    while (!done) 
     {
-        if (arr[i - 1] > arr[i])
+        done = 1;
+
+        for (int i = 1; i < size; i++)
         {
-            tmp = arr[i];
-            arr[i] = arr[i - 1];
-            arr[i - 1] = tmp;
+            if (arr[i - 1] > arr[i])
+            {
+                tmp = arr[i];
+                arr[i] = arr[i - 1];
+                arr[i - 1] = tmp;
+                done = 0;
+            }
         }
     }
 }

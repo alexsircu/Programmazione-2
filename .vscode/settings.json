@@ -13,5 +13,7 @@
     "makefile.makeDirectory": "${workspaceFolder}",
     "makefile.alwaysPreConfigure": false,
     "makefile.buildBeforeDebugging": false,
-    "terminal.integrated.cwd": "${workspaceFolder}"
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
 }
