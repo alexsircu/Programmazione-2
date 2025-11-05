@@ -3,6 +3,10 @@
 int square(int num) 
 {
     int ret = 0;
+
+    if (num < 0) 
+        num = -num;
+
     for (int i = 0; i < num; i++)
     {
         ret += num;
